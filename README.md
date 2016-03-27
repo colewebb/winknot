@@ -6,7 +6,7 @@ It does this by tapping into a user-created database that contains a list of equ
 
 An example: `word = c:\program files\microsoft office\office14\winword.exe`
 
-Slipknot, when run, presents a prompt similar to a cmd.exe Command Prompt. With the above example, if you were to type `word` at the prompt and press enter, it would send the command firefox to the operating system to execute.
+Slipknot, when run, presents a prompt similar to a cmd.exe Command Prompt. With the above example, if you were to type `word` at the prompt and press enter, it would send the command `c:\program files\microsoft office\office14\winword.exe` to the operating system to execute (which is a fairly normal path for Microsoft Word).
 
 If the user types something that doesn't show up in the database, it will pass the input to the system to execute. This means that you can treat Slipknot as a normal shell.
 
