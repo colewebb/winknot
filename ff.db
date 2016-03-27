@@ -1,0 +1,11 @@
+x = exit
+exit = exit
+close = exit
+c = reset
+clear = reset
+d = default
+def = default
+default = default
+help = help
+edit-db = edit-db
+redit = regedit

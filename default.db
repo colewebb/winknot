@@ -1,0 +1,12 @@
+x = exit
+exit = exit
+close = exit
+c = reset
+clear = reset
+d = default
+def = default
+default = default
+help = help
+edit-db = edit-db
+ff = C:\Documents and Settings\Cole\scripts\ff.db
+word = "C:\Program Files\Microsoft Office\Office12\WINWORD.exe"
