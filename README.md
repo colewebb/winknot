@@ -1,10 +1,10 @@
-# slipknot
-Slipknot is a program, rendered in Python, for Linux, that gives new names to commands that you use a lot. It has at its core the dream of ultimate user configurability, where the computer conforms to what you want, not the other way around.
+# winknot
+Winknot is a program, rendered in Python, for Windows, that gives new names to commands that you use a lot. It is a port of Slipknot, which does the same thing for Linux. It has at its core the dream of ultimate user configurability, where the computer conforms to what you want, not the other way around.
 
 
 It does this by tapping into a user-created database that contains a list of equivalence statements. 
 
-An example: word = c:\program files\microsoft office\office14\winword.exe
+An example: `word = c:\program files\microsoft office\office14\winword.exe`
 
 Slipknot, when run, presents a prompt similar to a cmd.exe Command Prompt. With the above example, if you were to type `word` at the prompt and press enter, it would send the command firefox to the operating system to execute.
 
