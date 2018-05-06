@@ -1,4 +1,4 @@
-# Slipknot - Advanced Command Line Aliasing
+# Winknot - Advanced Command Line Aliasing for Windows
 #    Copyright (C) 2015  Cole Webb
 #
 # This program is free software: you can redistribute it and/or modify it under the terms of
