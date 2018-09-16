@@ -1,3 +1,4 @@
-edit = "C:\Program Files (x86)\Geany\bin\geany.exe" C:\Users\colew\scripts\winknot\slipknot.py
+edit-source = "C:\Program Files (x86)\Geany\bin\geany.exe" C:\Users\colew\scripts\winknot\slipknot.py
+r = regedit
 local-dev = C:\Users\colew\scripts\winknot\local-dev.db
 ff = C:\Users\colew\scripts\winknot\ff.db
