@@ -1,0 +1,2 @@
+edit = "C:\Program Files (x86)\Geany\bin\geany.exe" C:\Users\colew\scripts\winknot\slipknot.py
+pull = cd "C:\Users\colew\scripts\winknot\" && git pull"

@@ -1,11 +1,3 @@
-x = exit
-exit = exit
-close = exit
-c = reset
-clear = reset
-d = default
-def = default
-default = default
-help = help
-edit-db = edit-db
+edit = "C:\Program Files (x86)\Geany\bin\geany.exe" C:\Users\colew\scripts\winknot\slipknot.py
+local-dev = C:\Users\colew\scripts\winknot\local-dev.db
 ff = C:\Users\colew\scripts\winknot\ff.db

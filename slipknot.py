@@ -19,7 +19,7 @@ try:
 except:
 	print("Your machine is missing one of the following libraries:\n\n    1) os\n    2) subprocess\n\nPlease make sure these libraries are installed, and try again.")
 	exit(1)
-subprocess.call(os.getenv("SLIPKNOT_HOME")+"/startup.bat")
+#subprocess.call(os.getenv("SLIPKNOT_HOME")+"/startup.bat")
 try:
 	database=open(os.getenv("SLIPKNOT_HOME") + "/default.db")
 	database.close
@@ -30,7 +30,7 @@ except:
 	main_database_status=""
 database_count=0
 if main_database_exists==False:
-	print("\nNo databases where found. Please make sure you have\na database named default.db on the root of the\nslipknot folder.")
+	print("\nNo databases were found. Please make sure you have\na database named default.db on the root of the\nslipknot folder.")
 	exit(1)
 found=False
 if main_database_status=="txt":
@@ -58,30 +58,42 @@ def find_in_text(search,database):
 	return execute
 while True:
 	input=raw_input(prompt)
-	execute=find_in_text(input,database_location)
-	if execute=="exit":
+	if input=="exit":
+		exit()
+	elif input=="x":
 		exit()
 	elif input=="reset":
 		subprocess.call("python " + os.getenv("SLIPKNOT_HOME") + "/slipknot.py", shell=True)
 		exit()
-	elif execute=="default":
+	elif input=="default":
 		database_location=os.getenv("SLIPKNOT_HOME") + "/default.db"
 		prompt="slipknot:default >>> "
-	elif execute=="help":
+		complete=True
+	elif input=="def":
+		database_location=os.getenv("SLIPKNOT_HOME") + "/default.db"
+		prompt="slipknot:default >>> "
+		complete=True
+	elif input=="help":
 		subprocess.call("notepad "+database_location,shell=True)
-	elif execute=="edit-db":
+		complete=True
+	elif input=="edit":
 		subprocess.call("notepad "+database_location,shell=True)
+		complete=True
 	else:
-		if execute.endswith(".db"):
-			try:
-				new_database=open(execute)
-				new_database.close
-			except:
-				print("Database not found, resetting to default")
-				pass
-			database_location=execute
-			prompt="slipknot:"+database_location+" >>> "
-		elif execute == "data not found":
-			subprocess.call(input, shell=True)
-		else:
-			subprocess.call(execute, shell=True)
+		pass
+	execute=find_in_text(input,database_location)
+	if execute.endswith(".db"):
+		try:
+			new_database=open(execute)
+			new_database.close
+		except:
+			print("Database not found, resetting to default")
+			pass
+		database_location=execute
+		prompt="slipknot:"+database_location+" >>> "
+	elif complete==True:
+		pass
+	elif execute == "data not found":
+		subprocess.call(input, shell=True)
+	else:
+		subprocess.call(execute, shell=True)
